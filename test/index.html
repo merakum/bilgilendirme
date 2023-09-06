@@ -17,6 +17,12 @@
             height: 0;
             padding-bottom: 56.25%; /* 16:9 oranı için gerekli */
             border: 1px solid #ccc;
+            overflow: hidden; /* İframe içeriğini gizlemek için */
+        }
+
+        .tv-frame:nth-child(4) {
+            width: calc(25% - 10px); /* Dördüncü iframe de aynı boyutta olsun */
+            padding-bottom: 56.25%; /* 16:9 oranı için gerekli */
         }
 
         .tv-frame:nth-child(5) {
