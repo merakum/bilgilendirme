@@ -7,21 +7,17 @@
     <style>
         .tv-container {
             display: flex;
-            flex-direction: column; /* Yatay sütun düzeni */
+            flex-direction: row; /* Yatay sütun düzeni */
+            flex-wrap: wrap;
+            gap: 10px; /* Boşluk ayarı */
             max-width: 100%; /* İçeriği taşmaması için maksimum genişlik */
         }
 
         .tv-frame {
-            width: 100%; /* Tam genişlik */
+            width: calc(25% - 10px); /* Dört sütunlu, yani çeyrek genişlikte */
             height: 0;
             padding-bottom: 56.25%; /* 16:9 oranı için gerekli */
             border: 1px solid #ccc;
-        }
-
-        .tv-frame:last-child {
-            width: 50%; /* Beşinci iframe yarı genişlikte olacak */
-            padding-bottom: 28.125%; /* 16:9 oranı için gerekli */
-            align-self: center; /* Ortala */
         }
 
         .tv-frame iframe {
