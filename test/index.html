@@ -7,22 +7,32 @@
     <style>
         .tv-container {
             display: flex;
-            flex-direction: row; /* Yatay sütun düzeni */
             flex-wrap: wrap;
             gap: 10px; /* Boşluk ayarı */
             max-width: 100%; /* İçeriği taşmaması için maksimum genişlik */
         }
 
         .tv-frame {
-            width: calc(25% - 10px); /* Dört sütunlu, yani çeyrek genişlikte */
+            width: calc(25% - 10px); /* 4 sütunlu, yani çeyrek genişlikte */
             height: 0;
             padding-bottom: 56.25%; /* 16:9 oranı için gerekli */
             border: 1px solid #ccc;
+            overflow: hidden; /* İframe içeriğini gizlemek için */
         }
 
         .tv-frame iframe {
             width: 100%;
             height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            /* Tablet ekran boyutu için dikey sütunlar */
+            .tv-container {
+                flex-direction: column;
+            }
+            .tv-frame {
+                width: 100%;
+            }
         }
     </style>
 </head>
