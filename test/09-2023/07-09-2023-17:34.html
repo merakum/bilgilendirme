@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        /* Sayfa stil kodları burada */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 48%; /* İframeleri yatayda iki sıra halinde yerleştiriyoruz */
+            height: calc(100vw * 9 / 32); /* 16:9 boyut oranını koruyoruz */
+            max-height: 100vh; /* Ekran yüksekliğine sığacak şekilde sınırlıyoruz */
+            margin: 5px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .col {
+            width: 100%; /* İframe'leri tam genişlikte gösteriyoruz */
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col">
+            <iframe src="https://mn-nl.mncdn.com/sivasbel_tv_live/sivasbel_merakum/playlist.m3u8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col">
+            <iframe src="https://mn-nl.mncdn.com/sivasbel_tv_live/sivasbel_meydan/playlist.m3u8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col">
+            <iframe src="https://mn-nl.mncdn.com/sivasbel_tv_live/sivasbel_medrese/playlist.m3u8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="col">
+            <iframe src="https://mn-nl.mncdn.com/sivasbel_tv_live/sivasbel_aksu/playlist.m3u8" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <iframe src="https://mn-nl.mncdn.com/sivasbel_tv_live/sivasbel_tekke/playlist.m3u8" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>
